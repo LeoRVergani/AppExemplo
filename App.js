@@ -1,20 +1,58 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View, SafeAreaView, Image, StyleSheet, StatusBar} from 'react-native'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return(
+        <SafeAreaView>
+            <View style={styles.container}>
+                <StatusBar backgroundColor='#0077b5' />
+                <Image
+                source={
+                { 
+                    uri: 'https://thumb.ac-illust.com/51/51fd82ada6bf077d997999c2336a14cb_t.jpeg'
+                }
+                }
+                style={styles.myImage}
+                />
+                <Text style={styles.myName}>Leonardo Vergani</Text>
+                <Text style={styles.myPosition}>Desenvolvedor de Software</Text>
+                <Text style={styles.title}>Contato</Text>
+                <View style={styles.separadorView}></View>
+            </View>
+        </SafeAreaView>
+    ) 
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    myImage: {
+        width: 150,
+        height: 150,
+        borderRadius: 75,
+        alignSelf: 'center',
+        marginVertical: 15,
+        borderWidth: 5,
+        borderColor: '#0077b5'
+    },
+    container:{
+        padding: 10,
+    },
+    myName: {
+        color: '#0077B5',
+        alignSelf: 'center',
+        fontSize: 28,
+    },
+    myPosition: {
+        color: '#CCC000',
+        alignSelf: 'center',
+        fontSize: 24
+    },
+    separadorView:{
+        backgroundColor: '#0077B5',
+        width: '100%',
+        height: 2,
+        marginVertical: 5
+    },
+    title:{
+        color:'#0077B5',
+        fontSize: 20
+    }
+})

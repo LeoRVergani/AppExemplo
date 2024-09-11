@@ -8,7 +8,7 @@ export default function App() {
                 <Image
                 source={
                 { 
-                    uri: 'https://thumb.ac-illust.com/51/51fd82ada6bf077d997999c2336a14cb_t.jpeg'
+                    uri: 'https://thumb.ac-illust.com/6c/6cdf0b9fe13286fe5f8b012a891364a1_t.jpeg'
                 }
                 }
                 style={styles.myImage}
